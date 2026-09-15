@@ -1,26 +1,587 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.header{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.header li {
+    display: inline-block;
+    padding: 5px 5px;
+    text-decoration: none;
+    color: #333;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.header button{
+    background-color: #DC1F5C;
+    color: rgb(255, 255, 255);
+    font-size: 6px;
+    width: 80px;
+    height: 30px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.footer div{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
 }
+
+.footer li {
+    display: inline-block;
+    padding: 5px 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.footer button{
+     background-color: #DC1F5C;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    width: 85px;
+    height: 20px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer .copyright{
+    color:#6e6e6f;
+    gap: 40%;
+    font-size: 12px;
+}
+
+.body{ 
+    font: Arial, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding-top:0 ;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.body .welcome{
+    background: linear-gradient(180deg, #FEFBFC 0%, #F2A6BE 100%);
+    text-align: justify;
+    font-size: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+.body .slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    min-height: 420px;
+}
+.body .welcome .btn{
+    display: flex;
+    justify-content: center;
+}
+
+.body .welcome .btn1{
+    background-color: #DC1F5C;
+    color: rgb(255, 255, 255);
+    font-size: 6px;
+    width: 200px;
+    height: 40px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.body .welcome .btn2{
+    background-color: #efd8df;
+    color: #DC1F5C;
+    font-size: 6px;
+    width: 200px;
+    height: 40px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.body .mission{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.body .mission .mission-text{
+    font-size: 20px;
+    font-weight: bold;
+    width: 200%;
+}
+
+.body .mission .mission-description{
+    font-size: 10px;
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.body .card{
+  display: flex;
+  flex-direction: column;
+    text-align: justify;
+    font-size: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.body .card .card-you{
+    background-color: #dc1f5b7e;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    width: 250px;
+    height: 150px;
+    align-self: flex-start;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    transform: rotate(3deg);
+}
+
+.body .card .card-you button{
+    background-color: #DC1F5C;
+    color: rgb(255, 255, 255);
+    font-size: 8px;
+    width: 100px;
+    height: 30px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.body .card .card-business{
+    background-color: #00A4D433;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    width: 250px;
+    height: 150px;
+    align-self: center;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    transform: rotate(-3deg);
+
+}
+
+.body .card .card-business button{
+    background-color: #00A4D4;
+    color: rgb(255, 255, 255);
+    font-size: 6px;
+    width: 100px;
+    height: 40px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.body .card .card-builders{
+    background-color: #FCFCFC8C;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    width: 250px;
+    height: 150px;
+    align-self: flex-end;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    transform: rotate(3deg);    
+}
+
+.body .card .card-builders button{
+    background-color: #7D05D2;
+    color: rgb(255, 255, 255);
+    font-size: 6px;
+    width: 100px;
+    height: 40px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.body .path{
+    background: linear-gradient(to bottom right, #dc1f5b2a, #00a2d421);
+    text-align: justify;
+    font-size: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+
+.body .path .path-text{
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.body .path .path-highlight{
+    color: #BC144E;
+}
+
+.body .path .card {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.body .path .card-you {
+    flex: 1;
+}
+
+.body .path .card-image {
+    flex: 0 0 260px;
+}
+
+.body .path .card-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.path .path-you,
+.path .path-business,
+.path .path-builders{
+    text-align: justify;
+    font-size: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    gap: 40%;
+}
+
+.body .path .card .card-text{
+    width: 40%;
+}
+
+@media (max-width: 700px) {
+    .body .path .card {
+        flex-direction: column;
+    }
+
+    .body .path .card-image {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 260px;
+    }
+}
+
+.body .path .path-you button{
+    background-color: #DC1F5C;
+    color: rgb(255, 255, 255);
+    font-size: 6px;
+    width: 70px;
+    height: 20px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.body .path .path-business button{
+    background-color: #00A4D4;
+    color: rgb(255, 255, 255);
+    font-size: 6px;
+    width: 70px;
+    height: 20px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.body .path .path-builders button{
+    background-color: #7D05D2;
+    color: rgb(255, 255, 255);
+    font-size: 6px;
+    width: 70px;
+    height: 20px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*.body .FAQs{
+    background-color: #00A4D4;
+    font-size: 10px;
+}
+
+.body .FAQs .FAQs-text{
+    background-color: #f2f2f2;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.body .FAQs .FAQs-button{
+    background-color: #4B0620;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+}
+
+.body .FAQs .FAQs-button button{
+    background-color: white;
+    color: black;
+    font-size: 5px;
+    margin: 4px;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.body .FAQs .FAQs-button button:hover{
+    background-color: #DC1F5C;
+    color: white;
+}
+
+.body .FAQs .questions{
+    background-color: #7D05D2;
+    font-size: 10px;
+    text-align: justify;
+    margin: 250px;
+}*/
+
+.trust{
+  display: flex;
+  flex-direction: column;
+}
+
+.body .trust .trust-text{
+    text-align: left;
+}
+
+/*.body .trust .trust-highlight {
+    display: inline-block;
+    text-decoration: ;
+    text-decoration-color: #DC1F5C;
+    text-decoration-thickness: 3px;
+    text-decoration-style: wavy;
+    text-underline-offset: 6px;
+}*/
+
+.body .trust .you{
+    background-image: url('./assets/69052b475560f68bce95945ef922cb7dd6d598fa.jpg');
+        background-size: cover ;
+    background-position: center;
+    justify-content: right;
+    color: rgb(0, 0, 0);
+    width: 250px;
+    height: 150px;
+    padding: 10px 15px;
+    align-self: flex-end;
+    border: none;
+    border-radius: 4px;
+    transform: rotate(3deg);
+}
+.body .trust .you-text{
+    background-color: #ffffff7e;
+    width: 230px;
+    height: 70px;
+    font-size: 5px;
+} 
+
+.body .trust .business{
+    background-image: url('./assets/bcbd12191d9ff7eb2b00bbe41b817dcd0715b1d1.jpg');
+        background-size: cover ;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    width: 250px;
+    height: 150px;
+    padding: 10px 15px;
+    align-self: flex-start;
+    border: none;
+    border-radius: 4px;
+    transform: rotate(3deg);
+}
+
+.body .trust .business-text{
+    background-color: #ffffff7e;
+    width: 200px;
+    height: 70px;
+    font-size: 10px;
+}
+
+.body .trust .builders{
+    background-image: url('./assets/bb60b92846dbeab67d04bc870bf54757432ed207.jpg');
+        background-size: cover ;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    width: 250px;
+    height: 150px;
+    padding: 10px 15px;
+    align-self: flex-end;
+    border: none;
+    border-radius: 4px;
+    transform: rotate(3deg);
+}
+
+.body .trust .builders-text{
+   background-color: #ffffff7e;
+    width: 200px;
+    height: 70px;
+    font-size: 10px;
+}
+
+
+
+.FAQs {
+    padding: 5px;
+}
+
+.FAQs .FAQs-text{
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.FAQs .FAQs-button{
+    text-align: justify;
+    font-size: 20px;
+    width: 250px;
+    height: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+.FAQs .FAQs-button button{
+    background-color: #ffffff;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 11px;
+    width: fill;
+    height: 15px;
+    margin: 4px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.FAQs .FAQs-button button:hover {
+    background-color: #DC1F5C;
+    color: #ffffff;
+}
+
+.FAQs .info{
+    text-align: justify;
+    justify-content: center;
+    display: flex;
+    gap: 20%;    
+}
+
+.FAQs .questions {
+    width: 300px;
+    padding: 20px;
+    font-size: 10px;
+    justify-content: left;
+    position: relative;
+}
+
+.FAQs .questions button{
+    background-color: white;
+    color: black;
+    border: none;
+    width: 300px;
+
+}
+
+.FAQs .questions .question1 .question1-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+}
+
+.FAQs .questions .question1-content:hover {
+    display: block;
+}
+
+.body .FAQs .still{
+    background-color: #dc1f5b7e;
+    color: rgb(0, 0, 0);
+    font-size: 9px;
+    width: fill;
+    height: 150px;
+    border: none;
+    border-radius: 5px;
+}
+
+.body .FAQs .still button{
+    background-color: #DC1F5C;
+    color: rgb(255, 255, 255);
+    font-size: 6px;
+    width: 100px;
+    height: 40px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.help{
+    text-align: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background: linear-gradient( to right, #BC144E, #4B0620);
+    border-radius: 28px;
+}
+
+.help .help-contact{
+    display: flex;
+    justify-content: left;
+    gap: 40px;
+    padding: 5px 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.help .help-contact li{
+    padding: 0 24px;
+}
+
+.help .help-contact li{
+    border-left: 5px solid rgba(255, 255, 255, 0.45);
+}
+
