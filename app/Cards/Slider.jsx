@@ -136,36 +136,10 @@ const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
                 <p className="slide-description">{items[slide].description}</p>
 
                 <div className="slide-actions">
-                  <button
-                    type="button"
-                    style={{
-                      background: '#DC1F5C',
-                      color: '#fff',
-                      border: 'none',
-                      borderRadius: 6,
-                      padding: '5px 5px',
-                      cursor: 'pointer',
-                      fontWeight: 700,
-                      pointerEvents: 'auto',
-                    }}
-                  >
+                  <button type="button" className="slide-btn slide-btn-primary">
                     {items[slide].button1}
                   </button>
-                  <button
-                    type="button"
-                    style={{
-                      background: '#fff',
-                      color: '#DC1F5C',
-                      border: 'none',
-                      borderRadius: 6,
-                      width: 40,
-                      height: 20,
-                      padding: '5px 5px',
-                      cursor: 'pointer',
-                      fontWeight: 700,
-                      pointerEvents: 'auto',
-                    }}
-                  >
+                  <button type="button" className="slide-btn slide-btn-secondary">
                     {items[slide].button2}
                   </button>
                 </div>
