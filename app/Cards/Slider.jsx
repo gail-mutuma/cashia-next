@@ -1,11 +1,13 @@
 'use client';
 
 import React, { useEffect, useState, createContext } from 'react';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import slider1 from '../assets/slider1.png';
 import slider2 from '../assets/slider2.png';
 import slider4 from '../assets/slider4.png';
 import slider5 from '../assets/slider5.png';
+import vector from '../assets/Vector.svg';
 
 export const SliderContext = createContext();
 
@@ -52,8 +54,7 @@ const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
   const changeSlide = (direction = 1) => {
     if (!items.length) return;
 
-    const nextIndex = (slide + direction + items.length) % items.length;
-    setSlide(nextIndex);
+    setSlide((currentSlide) => (currentSlide + direction + items.length) % items.length);
   };
 
   const goToSlide = (number) => {
@@ -90,7 +91,7 @@ const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
     }, autoPlayTime);
 
     return () => clearInterval(interval);
-  }, [autoPlay, autoPlayTime, items.length, slide]);
+  }, [autoPlay, autoPlayTime, items.length]);
 
   return (
     <div
@@ -109,34 +110,32 @@ const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
         }}
       >
         {items.length ? (
-          <div style={{ position: 'absolute', width: '90%', minHeight: 420, overflow: 'hidden', borderRadius: 18 }}>
-            <img
+          <div className="slide-frame">
+            <Image
+              className="slide-image"
               src={items[slide].image}
               alt={items[slide].title}
-              style={{ width: '100%', height: 400, objectFit: 'cover', display: 'block' }}
+              width={1200}
+              height={800}
+              priority
+            />
+            <Image
+              className="slide-vector"
+              src={vector}
+              alt=""
+              fill
+              aria-hidden="true"
             />
 
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                width: 200,
-                height: 20,  
-                fontSize: '5px',              
-                display: 'flex',
-                justifyContent: 'flex-start',
-                padding: '30px 20px',
-                zIndex: 2,
-              }}
-            >
-              <div style={{ maxWidth: 430, color: '#000000' }}>
-                <p style={{ margin: '0 0 10px', fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', opacity: 0.9 }}>
+            <div className="slide-overlay">
+              <div className="slide-content">
+                <p className="slide-motto">
                   {items[slide].motto}
                 </p>
-                <h3 style={{ margin: '0 0 12px', fontSize: 20, lineHeight: 1.2 }}>{items[slide].title}</h3>
-                <p style={{ margin: '0 0 18px', fontSize: 14, lineHeight: 1.5 }}>{items[slide].description}</p>
+                <h3 className="slide-title">{items[slide].title}</h3>
+                <p className="slide-description">{items[slide].description}</p>
 
-                <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                <div className="slide-actions">
                   <button
                     type="button"
                     style={{
@@ -175,7 +174,7 @@ const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
           </div>
         ) : null}
 
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 8, marginTop: 12 }}>
+        <div style={{ position: 'relative', zIndex: 3, display: 'flex', justifyContent: 'center', gap: 8, marginTop: 12 }}>
           {items.map((item, index) => (
             <button
               key={item.title}

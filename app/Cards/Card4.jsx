@@ -49,7 +49,7 @@ function Card4(){
                     border: 'none',
                     cursor: 'pointer',
                     textAlign: 'left',
-                    fontSize: '10px',
+                    fontSize: '13px',
                     fontWeight: '500',
                     display: 'flex',
                     justifyContent: 'space-between',

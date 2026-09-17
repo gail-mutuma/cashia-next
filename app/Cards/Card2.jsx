@@ -1,24 +1,30 @@
-import props from 'prop-types'
+import Image from 'next/image';
+import props from 'prop-types';
+import { ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+
 
 function Card2(props){
     return(
-        <div classNAme="path">
+        
         <div className="card">
             <div className="card-text">
                 <p>{props.text}</p>
-                <h1>{props.title}</h1>
+                <h1 style={{ fontSize: '15px', fontWeight: 'bold'}}>{props.title}</h1>
                 <li>{props.description}</li>
-                <li>{props.point1}</li>
-                <li>{props.point2}</li>
-                <li>{props.point3}</li>
-                <button>{props.buttonText}</button>
+                <li style={{ display: 'flex'}}><CheckCircle size={15}/>{props.point1}</li>
+                <li style={{ display: 'flex'}}><CheckCircle size={15}/>{props.point2}</li>
+                <li style={{ display: 'flex'}}><CheckCircle size={15}/>{props.point3}</li>
+                <button>{props.buttonText} <ArrowRight size={13} /></button>
             </div>
             <div className="card-image">
-                <img src={props.image} alt={`${props.title} illustration`} />
+                <Image src={props.image} alt={`${props.title} illustration`} width={320} height={260} style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
             </div>
         </div>
-        </div>
+        
     );
 }
+
+
 
 export default Card2;
