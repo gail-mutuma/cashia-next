@@ -3,6 +3,7 @@
 import React, { useEffect, useState, createContext } from 'react';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import slider1 from '../assets/slider1.png';
 import slider2 from '../assets/slider2.png';
 import slider4 from '../assets/slider4.png';
@@ -111,6 +112,7 @@ const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
       >
         {items.length ? (
           <div className="slide-frame">
+            
             <Image
               className="slide-image"
               src={items[slide].image}
@@ -145,6 +147,22 @@ const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
                 </div>
               </div>
             </div>
+            <button
+              type="button"
+              className="slide-nav slide-nav-prev"
+              aria-label="Previous slide"
+              onClick={() => changeSlide(-1)}
+            >
+              <ArrowLeft aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              className="slide-nav slide-nav-next"
+              aria-label="Next slide"
+              onClick={() => changeSlide(1)}
+            >
+              <ArrowRight aria-hidden="true" />
+            </button>
           </div>
         ) : null}
 

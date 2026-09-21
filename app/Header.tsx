@@ -28,9 +28,6 @@ function Header() {
                 </ul>
 
                 <div className="nav-actions">
-                    <button className="mode-toggle" aria-label="Toggle color mode">
-                        <span className="toggle-knob" />
-                    </button>
                     <button className="register-btn">Register</button>
                     <button
                         className="menu-btn"
