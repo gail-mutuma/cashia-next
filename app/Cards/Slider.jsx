@@ -138,12 +138,16 @@ const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
                 <p className="slide-description">{items[slide].description}</p>
 
                 <div className="slide-actions">
-                  <button type="button" className="slide-btn slide-btn-primary">
-                    {items[slide].button1}
-                  </button>
-                  <button type="button" className="slide-btn slide-btn-secondary">
-                    {items[slide].button2}
-                  </button>
+                  {items[slide].button1 && (
+                    <button type="button" className="slide-btn slide-btn-primary">
+                      {items[slide].button1}
+                    </button>
+                  )}
+                  {items[slide].button2 && (
+                    <button type="button" className="slide-btn slide-btn-secondary">
+                      {items[slide].button2}
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
