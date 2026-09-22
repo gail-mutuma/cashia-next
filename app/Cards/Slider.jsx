@@ -47,7 +47,7 @@ const slidesData = [
   
 ];
 
-const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
+const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime = 5000 })
   const [items] = useState(slidesData);
   const [slide, setSlide] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
