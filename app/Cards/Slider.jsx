@@ -47,7 +47,7 @@ const slidesData = [
   
 ];
 
-const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
+const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime = 5000 }) =>{
   const [items] = useState(slidesData);
   const [slide, setSlide] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
@@ -85,7 +85,7 @@ const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
   };
 
   useEffect(() => {
-    if (!autoPlay || items.length < 2) return undefined;
+    if (!autoPlay || items.length < 0.1) return undefined;
 
     const interval = setInterval(() => {
       changeSlide(1);
@@ -199,13 +199,6 @@ Slider.propTypes = {
   autoPlayTime: PropTypes.number,
   width: PropTypes.string,
   height: PropTypes.string,
-};
-
-Slider.defaultProps = {
-  autoPlay: true,
-  autoPlayTime: 5000,
-  width: '100%',
-  height: '100%',
 };
 
 export default Slider;

@@ -1226,13 +1226,6 @@ section[aria-labelledby="faq-heading"] {
     line-height: 1.5;
 }
 
-/*.FAQs .info {
-    display: grid;
-    grid-template-columns: minmax(190px, 0.7fr) minmax(0, 1.5fr);
-    gap: clamp(20px, 6vw, 96px);
-    align-items: start;
-}*/
-
 .faq-categories {
     display: flex;
     flex-direction: column;
@@ -1547,11 +1540,3 @@ button.accordion-button {
         background: rgba(255, 255, 255, 0.42);
     }
 }
-
-/*@media (max-width: 800px){
-    transform: scale(0.9);
-}
-
-@media (max-width: 800px){
-    transform: scale(0.8);
-}*/
