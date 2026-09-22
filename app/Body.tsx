@@ -57,17 +57,17 @@ function Body() {
             <h1 className="trust-text">Why people <span className="path-highlight">trust</span> Cashia</h1>
             <div className="you">
                 <div className="you-text">
-                <Card3 title="Everything we build at Cashia, is built to be useful" description="Every feature exists because someone told us money felt heavy somewhere. We listen, we build and we test with real people. If it doesn't make life lighter, it doesn't ship."/>
+                <Card3 title= {<span style={{ fontWeight:'bold'}}>Everything we build at Cashia, is built to be useful</span>} description="Every feature exists because someone told us money felt heavy somewhere. We listen, we build and we test with real people. If it doesn't make life lighter, it doesn't ship."/>
                 </div>
             </div>
             <div className="business">
                 <div className="business-text">
-                <Card3 title="Cashia is Safe and Secure. Your money and identity are safe here." description="We're licensed by the Central Bank of Kenya and built to meet both local and global compliance standards. Bank-grade security, PCI DSS certified, 3D Secure protected."/>
+                <Card3 title={<span style={{ fontWeight:'bold'}}>Cashia is Safe and Secure. Your money and identity are safe here.</span>} description="We're licensed by the Central Bank of Kenya and built to meet both local and global compliance standards. Bank-grade security, PCI DSS certified, 3D Secure protected."/>
                 </div>
             </div>
             <div className="builders">
                 <div className="builders-text">
-                <Card3 title="Cashia is Powered by Real People who pick up when you call." description="When something feels off, you get a human who picks up. When you message us on WhatsApp, you speak to Real people. No bots, no runaround, no 'that's not my department.' We speak Swahili and English, and we're here when you need us."/>
+                <Card3 title={<span style={{ fontWeight:'bold'}}>Cashia is Powered by Real People who pick up when you call.</span>} description="When something feels off, you get a human who picks up. When you message us on WhatsApp, you speak to Real people. No bots, no runaround, no 'that's not my department.' We speak Swahili and English, and we're here when you need us."/>
                 </div>
             </div>
         </div>

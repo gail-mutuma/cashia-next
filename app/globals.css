@@ -682,16 +682,17 @@
     }
 
     .slide-title {
-        font-size: clamp(28px, 8vw, 44px);
+        font-size: clamp(20px, 4vw, 35px);
     }
 
     .slide-description {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .slide-btn {
-        width: 100%;
+        width: 50%;
         justify-content: center;
+        font-size: 0.6rem;
     }
 }
 
@@ -720,6 +721,11 @@
 
     .slide-actions {
         margin-top: 14px;
+    }
+
+    .slide-button{
+        font-size: 0.4rem;
+        padding: 0;
     }
 }
 .body .welcome .btn{
@@ -1082,7 +1088,7 @@
 .body .trust .trust-text {
     text-align: left;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     margin: 0 0 10px;
 }
 
@@ -1093,12 +1099,12 @@
     background-position: center;
     color: rgb(0, 0, 0);
     font-size: 10px;
-    width: 50%;
+    width: 40%;
     min-height: 300px;
     margin: 10px 50px;
     padding: 10px 15px;
     border: none;
-    border-radius: 6px;
+    border-radius: 10px;
     transform: rotate(-3deg);
 }
 
@@ -1109,13 +1115,13 @@
     background-position: center;
     color: rgb(0, 0, 0);
     font-size: 10px;
-    width: 50%;
+    width: 40%;
     min-height: 300px;
-    margin: 10px 50px;
+    margin: -150px 50px;
     padding: 10px 15px;
     box-sizing: border-box;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     transform: rotate(3deg);
 }
 
@@ -1126,12 +1132,12 @@
     background-position: center;
     color: rgb(0, 0, 0);
     font-size: 10px;
-    width: 50%;
+    width: 40%;
     min-height: 300px;
     margin: 10px 50px;
-    padding: 10px 15px;
+    padding: 0;
     border: none;
-    border-radius: 6px;
+    border-radius: 15px;
     transform: rotate(3deg);
 }
 
@@ -1139,16 +1145,17 @@
 .body .trust .business-text,
 .body .trust .builders-text {
     position: absolute;
+    text-align: left;
     left: 15px;
     right: 15px;
     bottom: 10px;
     background-color: #ffffff7e;
-    width: auto;
+    width: fill;
     height: auto;
     min-height: 0;
-    padding: 6px 8px;
-    font-size: 10px;
-    box-sizing: border-box;
+    padding: 0px;
+    font-size: 15px;
+    border-radius: 15px;
 }
 
 .body .trust .you-text .card,
@@ -1171,6 +1178,7 @@
     .body .trust .business,
     .body .trust .builders {
         width: 80%;
+        margin: 10px;
     }
 }
 
@@ -1228,7 +1236,7 @@ section[aria-labelledby="faq-heading"] {
 .faq-categories {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: justify;
     gap: 10px;
     width: 200px;
     height: auto;
