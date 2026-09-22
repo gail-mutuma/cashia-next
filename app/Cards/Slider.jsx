@@ -85,7 +85,7 @@ const Slider = ({ width, height, autoPlay, autoPlayTime }) => {
   };
 
   useEffect(() => {
-    if (!autoPlay || items.length < 2) return undefined;
+    if (!autoPlay || items.length < 0.1) return undefined;
 
     const interval = setInterval(() => {
       changeSlide(1);
