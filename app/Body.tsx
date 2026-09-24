@@ -6,6 +6,7 @@ import Card2 from './Cards/Card2.jsx'
 import Card3 from './Cards/Card3.jsx'
 import FaqSection from './faq/FaqSections'
 import Slider from './Cards/Slider.jsx'
+import Chat from './chatbot/chat'
 import vector from '../assets/Vector.svg';
 import { FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa6';
 import Accordion from './faq/Accordion.js'
@@ -98,6 +99,9 @@ function Body() {
             </li>
         </ul>
         </section>
+        <div>
+            <Chat/>
+        </div>
         </main>
         
     );
