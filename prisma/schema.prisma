@@ -1,0 +1,26 @@
+datasource db {
+  provider = "mysql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model FaqCategory {
+  id       String @id
+  label    String
+  faqItems Faq[]
+
+  @@map("faq_categories")
+}
+
+model Faq {
+  id         Int         @id @default(autoincrement())
+  question   String
+  answer     String      @db.Text
+  categoryId String      @map("category_id")
+  category   FaqCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@index([categoryId])
+  @@map("FAQ")
+}

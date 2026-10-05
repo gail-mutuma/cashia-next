@@ -11,10 +11,11 @@ import vector from '../assets/Vector.svg';
 import { FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa6';
 import Accordion from './faq/Accordion.js'
 import { AlignCenter } from 'lucide-react'
+import { getFaqCategories } from "@/lib/faq";
 
 
-
-function Body() {
+export default async function Body() {
+    const categories = await getFaqCategories();
     return (
         <main className="body">
         <div className="welcome">
@@ -72,7 +73,7 @@ function Body() {
                 </div>
             </div>
         </div>
-       <FaqSection/>
+       <FaqSection categories={categories} />
         <section className="help">
         <div className="help-title">
             <p>Regulated by CBK | PCI DSS Certified | 3D Secure Protected</p>
@@ -106,5 +107,3 @@ function Body() {
         
     );
 }
-
-export default Body

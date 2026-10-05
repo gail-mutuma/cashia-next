@@ -4,14 +4,18 @@ import { useState } from "react";
 import Accordion from "./Accordion";
 import CategoryTabs from "./CategoryTabs";
 import Still from "./Still";
-import {FAQCategories } from "./faq-data"
+import type { FaqCategory } from "./faq-data";
 
-export default function FaqSection() {
-    const [activeId, setActiveId] = useState(FAQCategories[0].id);
+type FaqSectionProps = {
+  categories: FaqCategory[];
+};
+    
+export default function FaqSection({ categories }: FaqSectionProps) {
+    const [activeId, setActiveId] = useState(categories[0].id);
 
     const activeCategory = 
-    FAQCategories.find((category) => category.id == activeId) ??
-    FAQCategories[0];
+    categories.find((category) => category.id == activeId) ??
+    categories[0];
 
     return(
         <section aria-labelledby="faq-heading">
@@ -26,7 +30,7 @@ export default function FaqSection() {
 
             <div className="faq-layout">
                 <CategoryTabs
-                categories={FAQCategories}
+                categories={categories}
                 activeId={activeCategory.id}
                 onChange={setActiveId}
                 />
