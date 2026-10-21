@@ -1,12 +1,21 @@
-import { prisma } from "@/lib/prisma";
-import type { FaqCategory } from "../app/faq/faq-data";
+import type { Faq } from "@/app/faq/faq-data";
 
-export async function getFaqCategories(): Promise<FaqCategory[]> {
-  const categories = await prisma.faqCategory.findMany({
-    include: {
-      faqItems: true,
-    },
+const API_URL =
+  process.env.FAQ_API_URL ?? "http://cashia-service:8080";
+
+export async function getFaqs(): Promise<Faq[]> {
+  const response = await fetch(`${API_URL}/fetchAll`, {
+    cache: "no-store",
   });
 
-  return categories;
+
+  if (!response.ok) {
+    const body = await response.text();
+
+    throw new Error(
+      `FAQ API failed: ${response.status}`
+    );
+  }
+
+  return (await response.json()) as Faq[];
 }

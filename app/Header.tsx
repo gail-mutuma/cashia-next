@@ -12,7 +12,7 @@ function Header() {
             <nav className="header" aria-label="Main navigation">
                 <div className="brand" aria-label="Cashia home">
                     <div className="brand-mark">
-                        <Image src={logo} alt="Cashia logo" width={18} height={18} />
+                        <Image src={logo} alt="Cashia logo" width={18} height={18} unoptimized />
                     </div>
                     <span className="brand-name">Cashia</span>
                 </div>

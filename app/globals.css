@@ -1251,6 +1251,7 @@ section[aria-labelledby="faq-heading"] {
     background: #f2f2f2;
     color: #222;
     font-size: 13px;
+    font-weight: bold;
     line-height: 1.2;
     cursor: pointer;
 }

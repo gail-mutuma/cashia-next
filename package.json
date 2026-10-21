@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "postinstall": "prisma skills sync || exit 0"
+    "lint": "eslint"
   },
   "dependencies": {
     "@ai-sdk/google": "^4.0.78",
@@ -15,17 +14,12 @@
     "@fortawesome/free-brands-svg-icons": "^7.3.1",
     "@fortawesome/free-solid-svg-icons": "^7.3.1",
     "@fortawesome/react-fontawesome": "^3.5.0",
-    "@prisma/adapter-mariadb": "^7.10.0",
-    "@prisma/client": "^7.10.0",
-    "dotenv": "^18.0.5",
     "ai": "^7.0.112",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.4.0",
     "lucide": "^1.46.0",
     "lucide-react": "^1.46.0",
-    "mariadb": "^3.5.4",
     "next": "16.3.5",
-    "prisma": "^7.10.0",
     "prop-types": "^15.8.1",
     "react": "19.2.8",
     "react-collapse": "^5.1.1",

@@ -9,7 +9,7 @@ export default function Accordion({ category}: {category: FaqCategory }) {
 
     return(
          <div>
-            {category.faqItems.map((faq, index) => (
+            {(category.faqItems ?? []).map((faq, index) => (
                 <div
                 key={faq.question}
                 className="accordion-item"
