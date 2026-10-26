@@ -1,48 +1,26 @@
 services:
-
-  postgres:
-    image: postgres:15-alpine
-    container_name: cashia-service-postgres
-    restart: unless-stopped
-    environment:
-      POSTGRES_DB: postgres
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      PGDATA: /var/lib/postgresql/data/pgdata
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U user -d password"]
-      interval: 10s
-      timeout: 5s
-      start_period: 30s
-      retries: 10
-
   cashia-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: cashia-service
     container_name: cashia-service
     restart: unless-stopped
     ports:
       - "8080:8080"
-    depends_on:
-      postgres:
-        condition: service_healthy
     environment:
-      POSTGRES_DB: postgres
-      POSTGRES_HOST: postgres
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://ep-empty-resonance-b7lea85p-pooler.c-13.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+      SPRING_DATASOURCE_USERNAME: "neondb_owner"
+      SPRING_DATASOURCE_PASSWORD: 'npg_tEhY2RrPvx4F'
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8085/actuator/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
       interval: 30s
       timeout: 10s
       start_period: 90s
       retries: 5
 
   web:
-    image: cashianext-web:latest
+    image: gailm/cashianext-web:latest
     ports:
       - "3001:3000"
     environment:

@@ -12,10 +12,20 @@ import { FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa6';
 import Accordion from './faq/Accordion.js'
 import { AlignCenter } from 'lucide-react'
 import { getFaqs, } from "@/lib/faq";
+import type { Faq } from './faq/faq-data.ts';
 
 
 export default async function Body() {
-    const faqs = await getFaqs();
+    let faqs: Faq[] = [];
+    let faqLoadError = false;
+
+    try {
+        faqs = await getFaqs();
+    } catch (error) {
+        faqLoadError = true;
+        console.error("Failed to load homepage FAQs:", error);
+    }
+
     return (
         <main className="body">
         <div className="welcome">
@@ -73,7 +83,7 @@ export default async function Body() {
                 </div>
             </div>
         </div>
-       <FaqSection faqs={faqs} />
+       <FaqSection faqs={faqs} loadError={faqLoadError} />
         <section className="help">
         <div className="help-title">
             <p>Regulated by CBK | PCI DSS Certified | 3D Secure Protected</p>

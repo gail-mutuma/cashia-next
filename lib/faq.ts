@@ -1,12 +1,19 @@
 import type { Faq } from "@/app/faq/faq-data";
 
 const API_URL =
-  process.env.FAQ_API_URL ?? "http://cashia-service:8080";
+  process.env.FAQ_API_URL ?? "http://localhost:3031/";
 
 export async function getFaqs(): Promise<Faq[]> {
-  const response = await fetch(`${API_URL}/fetchAll`, {
-    cache: "no-store",
-  });
+  let response: Response;
+
+    try{
+    response = await fetch(`${API_URL}/fetchAll`, {
+      cache: "no-store",
+    });
+  }catch(error){
+      console.log("API connection failed", error);
+      throw new Error("Unable to connect to FAQ!");
+  }
 
 
   if (!response.ok) {

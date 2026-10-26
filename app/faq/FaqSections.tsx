@@ -9,9 +9,10 @@ import type { Faq, FaqCategory } from "./faq-data";
 
 type FaqSectionProps = {
   faqs: Faq[];
+  loadError?: boolean;
 };
 
-export default function FaqSection({ faqs }: FaqSectionProps) {
+export default function FaqSection({ faqs, loadError=false }: FaqSectionProps) {
 const categoryMap = new Map<string, FaqCategory>();
 
 faqs.forEach((faq) => {

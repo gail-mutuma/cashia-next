@@ -65,7 +65,7 @@ export async function getAIResponse(prompt: string) {
   const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY;
 
   if (!apiKey) {
-    const message = "Missing GOOGLE_GENERATIVE_AI_API_KEY. Add it to .env.local.";
+    const message = "Missing API KEY. Add it to .env.local";
     console.error(message);
     return message;
   }
