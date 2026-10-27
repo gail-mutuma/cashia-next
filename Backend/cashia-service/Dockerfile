@@ -1,3 +1,19 @@
+FROM maven:3.9-eclipse-temurin-21 AS build
+
+WORKDIR /app
+
+COPY .mvn/ .mvn/
+COPY mvnw pom.xml ./
+
+RUN chmod +x mvnw
+
+COPY src/ src/
+
+RUN ./mvnw -B -DskipTests package \
+    && JAR="$(find target -maxdepth 1 -type f -name '*.jar' ! -name '*.original' ! -name '*-plain.jar' | head -n 1)" \
+    && test -n "$JAR" \
+    && cp "$JAR" /app/app.jar
+
 FROM eclipse-temurin:21-jre-jammy
 
 RUN apt-get update \
@@ -11,7 +27,7 @@ RUN groupadd -r appuser && useradd -r -g appuser appuser
 WORKDIR /app
 
 # Copy the built JAR from host (built externally)
-COPY target/*.jar app.jar
+COPY --from=build /app/app.jar app.jar
 
 # Change ownership to app user
 RUN chown -R appuser:appuser /app
@@ -24,7 +40,7 @@ EXPOSE 8080
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=60s --retries=3 \
-  CMD curl -f http://localhost:8085/actuator/health || exit 1
+  CMD curl -f http://localhost:8080/actuator/health || exit 1
 
 # Run the application
 ENTRYPOINT ["java", "-XX:+UseContainerSupport", "-XX:MaxRAMPercentage=75.0", "-jar", "app.jar"]
