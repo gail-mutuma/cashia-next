@@ -118,7 +118,7 @@ const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime
               src={items[slide].image}
               alt={items[slide].title}
               width={1200}
-              height={800}
+              height={600}
               priority
             />
             <Image
@@ -128,6 +128,7 @@ const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime
               fill
               aria-hidden="true"
               unoptimized
+              fetchpriotiy="high"
             />
 
             <div className="slide-overlay">

@@ -9,6 +9,7 @@ export async function getFaqs(): Promise<Faq[]> {
     try{
     response = await fetch(`${API_URL}/fetchAll`, {
       cache: "no-store",
+      signal: AbortSignal.timeout(10000),
     });
   }catch(error){
       console.log("API connection failed", error);
