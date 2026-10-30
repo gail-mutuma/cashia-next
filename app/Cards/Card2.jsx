@@ -20,7 +20,7 @@ function Card2(props){
                 <button>{props.buttonText} <ArrowRight size={13} /></button>
             </div>
             <div className="card-image">
-                <Image src={props.image} alt={`${props.title} illustration`} width={320} height={260} style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
+                <Image src={props.image} alt={`${props.title} illustration`} width={320} height={260} sizes="(max-width: 640px) 100vw, 320px" quality={75} style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
             </div>
         </div>
         
