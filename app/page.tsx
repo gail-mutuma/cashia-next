@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 
 function App(){
 
-    preload("/images/hero-background.webp", {
+    preload("/assets/slider4.webp", {
         as: "image",
         fetchPriority: "high",
     });
