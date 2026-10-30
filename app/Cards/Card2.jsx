@@ -11,10 +11,12 @@ function Card2(props){
             <div className="card-text">
                 <p>{props.text}</p>
                 <h1 style={{ fontSize: '15px', fontWeight: 'bold'}}>{props.title}</h1>
+                <ul>
                 <li>{props.description}</li>
                 <li style={{ display: 'flex'}}><CheckCircle size={15}/>{props.point1}</li>
                 <li style={{ display: 'flex'}}><CheckCircle size={15}/>{props.point2}</li>
                 <li style={{ display: 'flex'}}><CheckCircle size={15}/>{props.point3}</li>
+                </ul>
                 <button>{props.buttonText} <ArrowRight size={13} /></button>
             </div>
             <div className="card-image">

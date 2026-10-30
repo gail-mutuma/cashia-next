@@ -5,7 +5,9 @@ function Card3(props){
         <div className="trust">
             <div className="card">
                 <p>{props.title}</p>
+                <ul>
                 <li>{props.description}</li>
+                </ul>
             </div>
         </div>
     );

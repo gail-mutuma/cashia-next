@@ -6,7 +6,7 @@ function Footer() {
             <div className="footer-inner">
                 <div className="footer-grid">
                     <div className="footer-column">
-                        <h3>Solutions</h3>
+                        <h1>Solutions</h1>
                         <ul>
                             <li>Cashia Wallet</li>
                             <li>Cashia Stika</li>
@@ -17,7 +17,7 @@ function Footer() {
                     </div>
 
                     <div className="footer-column">
-                        <h3>Company</h3>
+                        <h1>Company</h1>
                         <ul>
                             <li>About</li>
                             <li className="career-link">
@@ -31,7 +31,7 @@ function Footer() {
                     </div>
 
                     <div className="footer-column">
-                        <h3>Resources</h3>
+                        <h1>Resources</h1>
                         <ul>
                             <li>API documentation</li>
                             <li>FAQs</li>
@@ -40,7 +40,7 @@ function Footer() {
                     </div>
 
                     <div className="footer-column">
-                        <h3>Legal</h3>
+                        <h1>Legal</h1>
                         <ul>
                             <li>Cookie policy</li>
                             <li>Privacy policy</li>
@@ -55,7 +55,7 @@ function Footer() {
 
                 <div className="footer-lower">
                     <div className="social-panel">
-                        <h3>Connect with us</h3>
+                        <h1>Connect with us</h1>
                         <div className="social-icons">
                             <button className="social-tiktok" aria-label="TikTok"><FaTiktok /></button>
                             <button className="social-instagram" aria-label="Instagram"><FaInstagram /></button>
@@ -67,7 +67,7 @@ function Footer() {
                     </div>
 
                     <div className="newsletter-panel">
-                        <h3>Monthly Newsletter</h3>
+                        <h1>Monthly Newsletter</h1>
                         <div className="newsletter-form">
                             <input type="email" placeholder="Your email" aria-label="Your email" />
                             <button type="button">Subscribe Now</button>
