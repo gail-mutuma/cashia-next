@@ -128,7 +128,6 @@ const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime
               fill
               aria-hidden="true"
               unoptimized
-              fetchPriotiy="high"
               preload
             />
 
