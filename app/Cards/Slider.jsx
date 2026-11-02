@@ -183,11 +183,11 @@ const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime
               style={{
                 width: index === slide ? 20: 10,
                 height: 10,
-                borderRadius: '50%',
+                borderRadius: '20%',
                 border: 'none',
                 background: index === slide ? '#F2A6BE' : '#cbd5e1',
                 cursor: 'pointer',
-                padding: '24px',
+                padding: '14px',
               }}
             />
           ))}
