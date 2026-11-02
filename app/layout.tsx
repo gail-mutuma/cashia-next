@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Cashia Next App",
+  description: 'Send, receive and manage money with Cashia.'
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -119,7 +119,7 @@ const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime
               alt={items[slide].title}
               width={1200}
               height={600}
-              priority
+              priority sizes="(max-width: 768px) 100vw, 648px"
             />
             <Image
               className="slide-vector"
@@ -186,7 +186,7 @@ const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime
                 border: 'none',
                 background: index === slide ? '#F2A6BE' : '#cbd5e1',
                 cursor: 'pointer',
-                padding: 0,
+                padding: '24px',
               }}
             />
           ))}
