@@ -86,7 +86,7 @@
 }
 
 .login-btn:hover {
-    background: #7d1944;
+    background: #d3195d;
     color: #ffffff;
 }
 .register-btn {
@@ -100,7 +100,7 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 2px 6px rgba(189, 26, 88, 0.2);
+    box-shadow: 0 2px 6px rgb(244 190 223 / 0.91);
 }
 
 .register-btn:hover {

@@ -28,7 +28,7 @@ function Header() {
                 </ul>
 
                 <div className="nav-actions">
-                    <button className="login-btn">Register</button>
+                    <button className="login-btn">Log In</button>
                     <button
                         className="menu-btn"
                         aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
