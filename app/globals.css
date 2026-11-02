@@ -819,7 +819,7 @@
     position: absolute;
     inset: -24px;
     z-index: -1;
-    background-image: url('./assets/Vector\ \(10\).png');
+    background-image: url('./assets/Vector\ \(10\).webp');
     background-size: cover;
     background-position: center;
     filter: blur(30px);
@@ -1048,8 +1048,8 @@
 }
 
 .body .path .path-business button{
-    background-color: #028eb6;
-    color: rgb(255, 255, 255);
+    background-color: #00A4D4;
+    color: rgb(236 233 216);
     display: flex;
     font-size: 10px;
     width: fill;
