@@ -24,7 +24,7 @@ const slidesData = [
     {
         image: slider2,
         motto: 'Built for everyday life.',
-        title: 'OYour money, without the stress',
+        title: 'Your money, without the stress',
         description: 'Send, receive, and manage money without sharing numbers everywhere or worrying about who’s watching. The Cashia wallet keeps your details private, your records clear, and your money moving in seconds—so you can focus on life, not transactions.',
         button1: 'Get the Cashia App',
         button2: 'See how the wallet works',
