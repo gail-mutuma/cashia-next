@@ -32,7 +32,7 @@ export default async function Body() {
             <Slider/>
         </div>
         
-        <div className="solutions">
+            <div className="solutions">
             <div className="mission">
             <p className="mission-text">Our goal is to make money feel lighter, so more can begin</p>
             <p className="mission-description"> Money shouldn't feel heavy, awkward, or risky. Cashia is a Kenyan-built digital payments platform that removes the friction, fear, and exposure from everyday money moves. We're here for individuals who want to send or receive money without the stress, businesses tired of payment chaos, and developers who need tools that actually work. This is where people and businesses spend less time saying "if only" and more time asking "what's next."</p>
