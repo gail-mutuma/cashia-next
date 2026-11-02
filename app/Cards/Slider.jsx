@@ -129,6 +129,7 @@ const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime
               aria-hidden="true"
               unoptimized
               preload
+              fetchPriority="high"
             />
 
             <div className="slide-overlay">
