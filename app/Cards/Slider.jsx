@@ -5,7 +5,7 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import slider1 from '../assets/slider1.png';
-import slider2 from '../assets/slider2.png';
+import slider2 from '../assets/slider2.webp';
 import slider4 from '../assets/slider4.webp';
 import slider5 from '../assets/slider5.png';
 import vector from '../assets/Vector.svg';

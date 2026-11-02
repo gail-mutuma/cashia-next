@@ -1,6 +1,6 @@
 import Card1 from './Cards/Card1.jsx'
-import image from './assets/image.png'
-import imageOne from './assets/image (1).png'
+import image from './assets/image.webp'
+import imageOne from './assets/image (1).webp'
 import imageTwo from './assets/image (2).png'
 import Card2 from './Cards/Card2.jsx'
 import Card3 from './Cards/Card3.jsx'
