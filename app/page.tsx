@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 
 function App(){
 
-    preload("./assets/vector (10).webp", {
+    preload("./assets/Vector (10).webp", {
         as: "image",
         fetchPriority: "high",
     });

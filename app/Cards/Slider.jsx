@@ -117,9 +117,9 @@ const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime
               className="slide-image"
               src={items[slide].image}
               alt={items[slide].title}
-              width={1200}
-              height={600}
-              priority sizes="(max-width: 768px) 100vw, 648px"
+              width={1000}
+              height={500}
+              priority sizes="(max-width: 680px) 100vw, 340px"
             />
             <Image
               className="slide-vector"
