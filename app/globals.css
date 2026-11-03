@@ -1182,8 +1182,8 @@
     left: 15px;
     right: 15px;
     bottom: 10px;
-    background-color: #ffffff7e;
-    filter: blur(20px);
+    background-color: #ffffff7e ;
+    backdrop-filter: blur(20px);
     width: fill;
     height: auto;
     min-height: 0;
