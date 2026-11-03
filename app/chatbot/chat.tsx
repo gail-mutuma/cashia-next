@@ -68,7 +68,7 @@ export default function Chat() {
         <Card className="fixed bottom-24 right-6 z-50 flex h-[min(600px,calc(100vh-8rem))] w-[min(420px,calc(100vw-2rem))] flex-col shadow-xl border-(--cashia-active)">
           <CardHeader>
             <button
-                className="text-right text-(--cashia-active) text-xl"
+                className="text-left text-(--cashia-active) text-xl"
                 aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={isMenuOpen}
                 onClick={() => setIsMenuOpen((open) => !open)}

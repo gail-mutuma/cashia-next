@@ -1035,6 +1035,10 @@
     font-size: 14px;
 }
 
+.body .path .card.card-reverse{
+    flex-direction: row-reverse;
+}
+
 .body .path .card .card-text,
 .body .path .card .card-image {
     flex: 1;
@@ -1055,15 +1059,10 @@
 }
 
 .path .path-you,
+.path .path-business,
 .path .path-builders {
     width: 100%;
     padding: 6px;
-}
-
-.path .path-business{
-    width: 100%;
-    padding: 6px;
-    flex-direction: row-reverse;
 }
 
 @media (max-width: 700px) {

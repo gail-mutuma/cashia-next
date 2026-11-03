@@ -7,7 +7,7 @@ import { CheckCircle } from 'lucide-react';
 function Card2(props){
     return(
         
-        <div className="card">
+        <div className={`card ${props.reverse ? "card-reverse" : ""}`}>
             <div className="card-text">
                 <p>{props.text}</p>
                 <h1 style={{ fontSize: '15px', fontWeight: 'bold'}}>{props.title}</h1>
