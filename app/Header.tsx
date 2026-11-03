@@ -29,13 +29,6 @@ function Header() {
 
                 <div className="nav-actions">
                     <button className="login-btn">Log In</button>
-                    <button
-                        className="menu-btn"
-                        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-                        aria-expanded={isMenuOpen}
-                        onClick={() => setIsMenuOpen((open) => !open)}
-                    >
-                    </button>
                     <button className="register-btn">Register</button>
                     <button
                         className="menu-btn"

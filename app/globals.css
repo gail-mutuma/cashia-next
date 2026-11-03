@@ -154,6 +154,11 @@
         padding: 10px 12px;
     }
 
+    .login-btn {
+        min-width: 76px;
+        height: 32px;
+        font-size: 0.7rem;
+    }
     .register-btn {
         min-width: 76px;
         height: 32px;
@@ -212,8 +217,15 @@
         display: none;
     }
 
+    .login-btn {
+        min-width: 50px;
+        height: 28px;
+        font-size: 0.55rem;
+    }
     .register-btn {
-        display: none;
+        min-width: 50px;
+        height: 28px;
+        font-size: 0.55rem;
     }
 }
 

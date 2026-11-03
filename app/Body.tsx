@@ -53,7 +53,7 @@ export default async function Body() {
         <div className="path">
             <div className="path-text">
                 <h1>Choose your <span className="path-highlight">path</span></h1>
-                <p  style={{fontSize:'15px', width: '80%', alignSelf: 'center'}}>However you move money, there’s a path built for you. Cashia adapts to your everyday needs, whether you’re managing personal payments, running a business, or creating something new.</p>
+                <p  style={{fontSize:'15px', width: '80%', textAlign: 'center'}}>However you move money, there’s a path built for you. Cashia adapts to your everyday needs, whether you’re managing personal payments, running a business, or creating something new.</p>
             </div>
             <div className="path-you">
                     <Card2 image={image} text={<span className="path-you-text">Money moves with you</span>} title="For You Life" description="Cashia is built for real life—splitting bills, sending support, paying rent, or getting paid back without awkward follow-ups. With simple tags instead of long account details, moving money feels natural, fast, and stress-free." point1="Send and receive money instantly using simple tags." point2="Track spending without spreadsheets or stress." point3="Pay people the way you already think—fast and familiar." buttonText="Get Started" />

@@ -170,28 +170,29 @@ const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime
             >
               <ArrowRight aria-hidden="true" />
             </button>
+              <div style={{ position: 'relative', zIndex: 3, display: 'flex', justifyContent: 'center', gap: 8, marginTop: 12 }}>
+                  {items.map((item, index) => (
+                      <button
+                          key={item.title}
+                          type="button"
+                          aria-label={`Go to slide ${index + 1}`}
+                          onClick={() => goToSlide(index)}
+                          style={{
+                              width: index === slide ? 12: 6,
+                              height: 6,
+                              borderRadius: '50%',
+                              border: 'none',
+                              background: index === slide ? '#F2A6BE' : '#cbd5e1',
+                              cursor: 'pointer',
+                              padding: '14px',
+                          }}
+                      />
+                  ))}
+              </div>
           </div>
         ) : null}
 
-        <div style={{ position: 'relative', zIndex: 3, display: 'flex', justifyContent: 'center', gap: 8, marginTop: 12 }}>
-          {items.map((item, index) => (
-            <button
-              key={item.title}
-              type="button"
-              aria-label={`Go to slide ${index + 1}`}
-              onClick={() => goToSlide(index)}
-              style={{
-                width: index === slide ? 20: 10,
-                height: 10,
-                borderRadius: '20%',
-                border: 'none',
-                background: index === slide ? '#F2A6BE' : '#cbd5e1',
-                cursor: 'pointer',
-                padding: '14px',
-              }}
-            />
-          ))}
-        </div>
+
       </SliderContext.Provider>
     </div>
   );
