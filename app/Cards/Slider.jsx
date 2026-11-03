@@ -170,7 +170,18 @@ const Slider = ({ width = '100%', height = '100%', autoPlay = true, autoPlayTime
             >
               <ArrowRight aria-hidden="true" />
             </button>
-              <div style={{ position: 'absolute', zIndex: 3, display: 'flex', justifyContent: 'center', gap: 8, marginTop: 12 }}>
+              <div style={{
+                  position: 'absolute',
+                  zIndex: 3,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  gap: 8,
+                  marginTop: 12,
+                  bottom: '16px',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  alignItems: 'center'
+              }}>
                   {items.map((item, index) => (
                       <button
                           key={item.title}
