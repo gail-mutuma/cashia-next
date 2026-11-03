@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import '@fontsource/metropolis'
 import './index.css'
 // App is a JavaScript module without TypeScript declarations.
 // @ts-expect-error -- the module is a valid React component at runtime.

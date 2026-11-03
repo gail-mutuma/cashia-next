@@ -249,7 +249,7 @@
     position: relative;
 }
 
-.footer-column h3 {
+.footer-column h1 {
     margin: 0 0 16px;
     font-size: 1.06rem;
     font-weight: 700;
@@ -258,7 +258,7 @@
     padding-bottom: 8px;
 }
 
-.footer-column h3::after {
+.footer-column h1::after {
   content: "";
   position: absolute;
   left: 0;
@@ -531,7 +531,7 @@
 }
 
 .body{ 
-    font: Arial, sans-serif;
+    font: 'Metropolis', sans-serif;
     list-style: none;
     margin: 0;
     padding:0;
