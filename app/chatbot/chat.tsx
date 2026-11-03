@@ -19,6 +19,7 @@ export default function Chat() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -66,6 +67,12 @@ export default function Chat() {
       {open && (
         <Card className="fixed bottom-24 right-6 z-50 flex h-[min(600px,calc(100vh-8rem))] w-[min(420px,calc(100vw-2rem))] flex-col shadow-xl border-(--cashia-active)">
           <CardHeader>
+            <button
+                className="text-right text-(--cashia-active) text-xl"
+                aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={isMenuOpen}
+                onClick={() => setIsMenuOpen((open) => !open)}
+            > X </button>
             <CardTitle className="text-center text-(--cashia-active) text-2xl">Cashia Chat</CardTitle>
           </CardHeader>
 

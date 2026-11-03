@@ -613,7 +613,8 @@
 }
 
 .slide-nav:hover {
-    background: rgba(17, 17, 17, 0.55);
+    background: rgb(211 25 93);
+    color: rgb(255, 255, 255);
     transform: scale(1.05);
 }
 
@@ -1054,10 +1055,15 @@
 }
 
 .path .path-you,
-.path .path-business,
 .path .path-builders {
     width: 100%;
     padding: 6px;
+}
+
+.path .path-business{
+    width: 100%;
+    padding: 6px;
+    flex-direction: row-reverse;
 }
 
 @media (max-width: 700px) {
